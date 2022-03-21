@@ -1,37 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class='container mt-5'>
-  <form method='POST'>
-    <div class='text-center'>
-      <h1>SingleKey</h1>
-    </div>
-    <div class='row mt-3'>
-      <div class='col'>
-        <label>Name</label><br>
-        <input name='name'>
+<div class="banner">
+  <!-- SingleKey logo -->
+  <img class="mt-3 ml-5 company-logo" src="/static/assets/singlekey_logo.png" height="45px"></img>
+  <!-- Account login button -->
+  <button id="sharp" type="button" class="btn btn-outline-primary float-right">Log in</button>
+</div>
+<div class="flex-wrapper">
+  <div class='container mt-5'>
+    <form method='POST'>
+      <div class='text-left'>
+        <h2 style="font-weight: bold;">Submit information</h2>
       </div>
-      <div class='col'>
-        <label>Email</label><br>
-        <input name='email'>
-      </div>
-    </div>
-    <br>
-    <br>
-    {% csrf_token %}
-    <div class='text-center'>
-      <button type='supmit' class='btn btn-primary'>Submit</button>
-    </div>
-  </form>
-  {% if results %}
-  <div class='w-100 text-center mt-5'>
-    <h3>Previous submissions</h3>
-      {% for i in results %}
-        <div class='text-left mb-3 p-4 card'>
-          <b>{{ i.name }}</b><br>
-          <b>{{ i.email }}</b>
+      <div class='mt-4'>
+        <div>
+          <label style="font-weight: bold;">Applicant Name</label><br>
+          <input class="input px-4 py-4" name='name' placeholder="Applicant name">
         </div>
-      {% endfor %}
-    {% endif %}
+        <div class="mt-4">
+          <label style="font-weight: bold;">Email address</label><br>
+          <input class="input px-4 py-4" name='email' placeholder="Email address">
+        </div>
+      </div>
+      <br>
+      <br>
+      {% csrf_token %}
+      <div class='text-left'>
+        <button type='submit' class='btn btn-secondary'>Submit</button>
+      </div>
+    </form>
+    {% if results %}
+    <div class='w-100 text-center mt-5'>
+      <h3>Previous submissions</h3>
+        {% for i in results %}
+          <div class='text-left mb-3 p-4 card'>
+            <b>{{ i.name }}</b><br>
+            <b>{{ i.email }}</b>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
+  <!-- footer that displaying copyright notice -->
+  <footer class="footer py-3">
+    <div class="footerText container">
+    &copy All rights reserved SingleKey 2021
+  </footer>
 </div>
 {% endblock %}

@@ -174,7 +174,7 @@ select {
   color: #474747;
 }
 .container {
-  margin-bottom: 7em;
+  margin-bottom: 1em;
   max-width: 90em;
 }
 .btn {
@@ -198,6 +198,10 @@ select {
 .btn-outline-primary {
   color: #2498d8;
   border-color: #2498d8;
+  width: 5em;
+  height: 40px;
+  margin-right: 7%;
+  margin-top: 1em;
 }
 .btn-outline-primary:hover {
   background-color: rgb(96, 157, 230);
@@ -209,8 +213,19 @@ select {
 }
 .btn-secondary {
   color: white;
-  background-color: #292468;
-  border-color: #292468;
+  background-color: #342b51;
+  border-color: #342b51;
+  width: 8em;
+}
+
+#sharp {
+  border-radius: 2px !important;
+}
+.banner {
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+}
+.company-logo {
+  margin-bottom: 1rem;
 }
 
 .btn-cancel {
@@ -223,17 +238,17 @@ select {
   background-color: white;
 }
 .btn-secondary:hover {
-  color: #292468;
+  color: #342b51;
   background-color: white;
 }
 .btn-outline-secondary {
-  color: #292468;
+  color: #342b51;
   background-color: white;
-  border-color: #292468;
+  border-color: #342b51;
 }
 .btn-outline-secondary:hover {
   color: white;
-  background-color: #292468;
+  background-color: #342b51;
 }
 .btn-outline-disabled{
   color:#595d64;
@@ -253,6 +268,7 @@ select {
 .form-group label {
   white-space: nowrap;
 }
+
 /* ----- Novel classes ----- */
 .sk-btn-sm {
   width: 13em;
@@ -553,9 +569,19 @@ select {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: #342b51;
   z-index: 1;
   box-shadow: 0px -4px 14px rgba(0, 0, 0, 0.05);
+}
+.footerText {
+  color: white;
+  margin-bottom: 0px;
+}
+.flex-wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .gradient {
   background-image: linear-gradient(to right, #292468 36%, #2598d8
